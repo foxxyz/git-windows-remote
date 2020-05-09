@@ -7,7 +7,7 @@ Installing
 ----------
 
 ```
-curl -sSL https://raw.githubusercontent.com/foxxyz/git-windows-remote/master/install.sh | sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/foxxyz/git-windows-remote/master/install.sh)"
 ```
 
 Of course, make sure to [read the install script](https://github.com/foxxyz/git-windows-remote/blob/master/install.sh) before doing something dangerous like that.
