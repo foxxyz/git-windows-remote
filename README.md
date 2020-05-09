@@ -27,6 +27,14 @@ Removing Remotes:
 git windows-remote remove prod
 ```
 
+Uninstalling
+------------
+
+To get rid of `git-windows-remote` just run:
+```
+git windows-remote uninstall
+```
+
 *Wait. You can push/pull from Windows git remotes? 🤯*
 ---------------------------------------------------
 
