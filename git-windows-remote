@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Add remote
+if [ "$1" == "add" ]; then
+    git remote add $2 $3
+    git config --local remote.$2.receivepack "powershell git receive-pack"
+    git config --local remote.$2.uploadpack "powershell git upload-pack"
+# Remove remote
+elif [ "$1" == "remove" ]; then
+    git remote remove $2
+    git config --local --unset remote.$2.receivepack
+    git config --local --unset remote.$2.uploadpack
+# Remove myself
+elif [ "$1" == "uninstall" ]; then
+	rm $(dirname $0)/git-windows-remote
+	echo "git windows-remote successfully uninstalled!"
+# Otherwise delegate to regular git remote
+else
+    git remote
+fi
